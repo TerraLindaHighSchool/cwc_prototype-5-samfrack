@@ -22,6 +22,7 @@ public class Target : MonoBehaviour
         targetRb.AddTorque(RandomTorque(), RandomTorque(), RandomTorque(), ForceMode.Impulse);
         transform.position = RandomSpawnPos();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        Physics.IgnoreLayerCollision(8, 8);
     }
 
     // Update is called once per frame
