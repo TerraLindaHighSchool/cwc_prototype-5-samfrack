@@ -24,11 +24,11 @@ public class GameManager : MonoBehaviour
 
     public void StartGame(int difficulty)
     {
-        spawnRate /= difficulty; 
+        spawnRate /= difficulty;
+        isGameActive = true;
         StartCoroutine(SpawnTarget());
         score = 0;
         UpdateScore(0);
-        isGameActive = true;
         titleScreen.gameObject.SetActive(false);
     }
 
